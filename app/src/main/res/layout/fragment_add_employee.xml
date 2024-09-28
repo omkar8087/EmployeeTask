@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".fragments.AddEmployee">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <!-- Employee Name Input Field -->
+        <EditText
+            android:id="@+id/etEmployeeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Employee Name"
+            android:inputType="text"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Employee Username Input Field -->
+        <EditText
+            android:id="@+id/etEmployeeUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Employee Username"
+            android:inputType="text"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Employee Password Input Field -->
+        <EditText
+            android:id="@+id/etEmployeePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Employee Password"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSaveEmployee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:padding="16dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

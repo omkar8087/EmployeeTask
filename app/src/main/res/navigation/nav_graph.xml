@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homePage">
+
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.employeetask.fragments.HomePage"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_adminLogin"
+            app:destination="@id/adminLogin" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminLogin"
+        android:name="com.example.employeetask.fragments.AdminLogin"
+        android:label="fragment_admin_login"
+        tools:layout="@layout/fragment_admin_login" >
+        <action
+            android:id="@+id/action_adminLogin_to_adminDashboard"
+            app:destination="@id/adminDashboard" />
+        <action
+            android:id="@+id/action_adminLogin_to_employeeDashboard"
+            app:destination="@id/employeeDashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/employeeDashboard"
+        android:name="com.example.employeetask.fragments.EmployeeDashboard"
+        android:label="fragment_employee_dashboard"
+        tools:layout="@layout/fragment_employee_dashboard" >
+        <action
+            android:id="@+id/action_employeeDashboard_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminDashboard"
+        android:name="com.example.employeetask.fragments.AdminDashboard"
+        android:label="fragment_admin_dashboard"
+        tools:layout="@layout/fragment_admin_dashboard" >
+        <action
+            android:id="@+id/action_adminDashboard_to_homePage"
+            app:destination="@id/homePage" />
+        <action
+            android:id="@+id/action_adminDashboard_to_addEmployee"
+            app:destination="@id/addEmployee" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEmployee"
+        android:name="com.example.employeetask.fragments.AddEmployee"
+        android:label="fragment_add_employee"
+        tools:layout="@layout/fragment_add_employee" >
+        <action
+            android:id="@+id/action_addEmployee_to_adminDashboard"
+            app:destination="@id/adminDashboard" />
+    </fragment>
+</navigation>
